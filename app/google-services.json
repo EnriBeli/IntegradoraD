@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "143473694863",
+    "project_id": "integradora10-bb03f",
+    "storage_bucket": "integradora10-bb03f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:143473694863:android:70081bfdcc618108a978fa",
+        "android_client_info": {
+          "package_name": "com.example.integradorad"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "143473694863-lg27vb0uq7d53g63ig0jc08f0g55b8h7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZC1-oognKMMRENUyojCG9lUPURi-oYh4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "143473694863-lg27vb0uq7d53g63ig0jc08f0g55b8h7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
