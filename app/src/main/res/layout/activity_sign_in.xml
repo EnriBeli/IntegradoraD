@@ -67,12 +67,13 @@
             android:id="@+id/recoveryAccountTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="32dp"
-            android:layout_marginStart="24dp"
-            android:textSize="16sp"
+            android:gravity="end"
             android:text="@string/forget_password"
-            android:gravity="end" />
+            android:textColor="#3F51B5"
+            android:textSize="16sp" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/signInAppCompatButton"
@@ -97,24 +98,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0"
-            android:text="@string/text_signup"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/signUpTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="27dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_weight="0"
-            android:text="@string/link_signup"
-            android:textColor="#3F51B5"
-            android:textSize="24sp" />
     </LinearLayout>
 
     <TextView
@@ -124,10 +107,47 @@
         android:gravity="center"
         android:text="@string/title_active_login"
         android:textColor="@color/blue"
-        android:textSize="30sp"
+        android:textSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
         app:layout_constraintVertical_bias="0.857"
         tools:layout_editor_absoluteX="0dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="198dp"
+        android:layout_height="154dp"
+        android:layout_marginStart="104dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.586"
+        app:srcCompat="@drawable/logo2" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:layout_weight="0"
+        android:text="@string/text_signup"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/signUpTextView"
+        app:layout_constraintHorizontal_bias="0.847"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <TextView
+        android:id="@+id/signUpTextView"
+        android:layout_width="76dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="84dp"
+        android:layout_weight="0"
+        android:text="@string/link_signup"
+        android:textColor="#3F51B5"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

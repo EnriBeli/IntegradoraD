@@ -17,6 +17,7 @@
         <activity android:name=".MainActivity" android:theme="@style/Theme.Main"/>
         <activity android:name=".SignUpActivity"/>
         <activity android:name=".AccountRecoveryActivity"/>
+        <activity android:name=".CheckEmailActivity"/>
         <activity android:name=".SignInActivity"
             android:exported="true">
             <intent-filter>
