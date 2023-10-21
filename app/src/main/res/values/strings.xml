@@ -30,4 +30,13 @@
     <string name="subtitle_delete_account">Por motivos de seguridad para eliminar tu cuenta por completo, debes de ingresar tu contraseña.</string>
     <string name="delete">Eliminar</string>
     <string name="registrar_cita">Registrar cita</string>
+    <string name="bottom_mimedico">Mi medico</string>
+    <string name="bottom_misrecetas">Mis recetas</string>
+    <string name="bottom_mismedicamentos">Mis medicamentos</string>
+    <string name="mi_medico">MI MEDICO</string>
+    <string name="mis_recetas">MIS RECETAS</string>
+    <string name="mis_medicamentos">MIS MEDICAMENTOS</string>
+    <string name="registrar_cita1">REGISTRAR CITA</string>
+    <string name="mis_citas">MIS CITAS</string>
+    <string name="ubicacion">UBICACION</string>
 </resources>

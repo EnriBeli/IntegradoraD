@@ -51,7 +51,7 @@
 
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/updateProfileAppCompatButton01"
+            android:id="@+id/MiMedicoButton01"
             android:layout_width="150dp"
             android:layout_height="120dp"
             android:layout_gravity="left"
@@ -61,11 +61,11 @@
             android:background="@drawable/ic_buttom"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:text="Mi medico"
+            android:text="@string/bottom_mimedico"
             android:textColor="@color/white" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/updateProfileAppCompatButton02"
+            android:id="@+id/MisRecetasButton02"
             android:layout_width="150dp"
             android:layout_height="120dp"
             android:layout_gravity="right"
@@ -75,7 +75,7 @@
             android:background="@drawable/ic_buttom"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:text="Mis recetas"
+            android:text="@string/bottom_misrecetas"
             android:textColor="@color/white" />
 
 
@@ -107,7 +107,7 @@
 
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/updateProfileAppCompatButton03"
+            android:id="@+id/MisMedicamentosButton03"
             android:layout_width="150dp"
             android:layout_height="120dp"
             android:layout_gravity="left"
@@ -117,12 +117,11 @@
             android:background="@drawable/ic_buttom"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:text="Mis medicamentos"
+            android:text="@string/bottom_mismedicamentos"
             android:textColor="@color/white" />
 
-
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/updateProfileAppCompatButton04"
+            android:id="@+id/RegistrarCitaButton04"
             android:layout_width="150dp"
             android:layout_height="120dp"
             android:layout_gravity="right"
@@ -153,7 +152,7 @@
 
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/updateProfileAppCompatButton05"
+            android:id="@+id/MisCitasButton05"
             android:layout_width="150dp"
             android:layout_height="120dp"
             android:layout_gravity="left"
@@ -168,7 +167,7 @@
 
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/updateProfileAppCompatButton06"
+            android:id="@+id/UbicacionButton06"
             android:layout_width="150dp"
             android:layout_height="120dp"
             android:layout_gravity="right"

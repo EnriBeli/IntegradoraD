@@ -55,6 +55,36 @@ class MainActivity : AppCompatActivity() {
             signOut()
         }
 
+        binding.MiMedicoButton01.setOnClickListener {
+            val intent = Intent(this, MiMedico::class.java)
+            this.startActivity(intent)
+        }
+
+        binding.MisRecetasButton02.setOnClickListener {
+            val intent = Intent(this, MisRecetasActivity::class.java)
+            this.startActivity(intent)
+        }
+
+        binding.MisMedicamentosButton03.setOnClickListener {
+            val intent = Intent(this, MisMedicamentosActivity::class.java)
+            this.startActivity(intent)
+        }
+
+        binding.RegistrarCitaButton04.setOnClickListener {
+            val intent = Intent(this, RegistrarCitaActivity::class.java)
+            this.startActivity(intent)
+        }
+
+        binding.MisCitasButton05.setOnClickListener {
+            val intent = Intent(this, MisCitasActivity::class.java)
+            this.startActivity(intent)
+        }
+
+        binding.UbicacionButton06.setOnClickListener {
+            val intent = Intent(this, UbicacionActivity::class.java)
+            this.startActivity(intent)
+        }
+
     }
 /*
     private  fun updateProfile (name : String) {

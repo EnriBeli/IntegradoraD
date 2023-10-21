@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -14,15 +14,37 @@
         android:supportsRtl="true"
         android:theme="@style/Base.Theme.IntegradoraD."
         tools:targetApi="31">
-        <activity android:name=".MainActivity" android:theme="@style/Theme.Main"/>
-        <activity android:name=".SignUpActivity"/>
-        <activity android:name=".AccountRecoveryActivity"/>
-        <activity android:name=".CheckEmailActivity"/>
-        <activity android:name=".SignInActivity"
+        <activity
+            android:name=".UbicacionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MisCitasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegistrarCitaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MisMedicamentosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MisRecetasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MiMedico"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.Main" />
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".AccountRecoveryActivity" />
+        <activity android:name=".CheckEmailActivity" />
+        <activity
+            android:name=".SignInActivity"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>
