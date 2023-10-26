@@ -18,6 +18,11 @@ class AccountRecoveryActivity : AppCompatActivity() {
         binding = ActivityAccountRecoveryBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.Recoverylogin.setOnClickListener {
+            val intent = Intent(this, SignInActivity::class.java)
+            this.startActivity(intent)
+        }
+
 
         binding.senEmailAppCompatButton.setOnClickListener {
             val emailAddress = binding.emailEditText.text.toString()

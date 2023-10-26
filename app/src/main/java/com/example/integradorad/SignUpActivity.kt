@@ -48,8 +48,13 @@ class SignUpActivity : AppCompatActivity() {
 
         }
 
-        binding.backImageView.setOnClickListener {
+        binding.SesionInico.setOnClickListener {
             val intent = Intent(this, SignInActivity::class.java)
+            this.startActivity(intent)
+        }
+
+        binding.TeminosCondiciones.setOnClickListener {
+            val intent = Intent(this, TerminosCondicionesActivity::class.java)
             this.startActivity(intent)
         }
 

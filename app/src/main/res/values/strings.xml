@@ -10,7 +10,7 @@
     <string name="repeat_password">Confirma la contraseña</string>
     <string name="signup">Sign Up</string>
     <string name="text_signup">¿Ya tienes una cuenta?</string>
-    <string name="link_signup">Acceder</string>
+    <string name="link_signup">Registrate</string>
     <string name="all">TODO</string>
     <string name="user_email">userdefault@gmail.com</string>
     <string name="user_name">User Default</string>
@@ -39,4 +39,15 @@
     <string name="registrar_cita1">REGISTRAR CITA</string>
     <string name="mis_citas">MIS CITAS</string>
     <string name="ubicacion">UBICACION</string>
+    <string name="iniciar_sesion"><u>Iniciar Sesion</u></string>
+    <string name="terminos_y_condiciones"><u>Terminos y condiciones</u></string>
+    <string name="TextoTerminos3"><b>Recopilación de información personal.</b> \n\Recopilamos información personal de nuestros usuarios cuando se registran en nuestra Aplicación movil. La información personal que podemos recopilar incluye:\n\• Nombre y apellidos.  \n\• Dirección de correo electrónico. \n\• Número de teléfono.</string>
+    <string name="TextoTerminos1"><b>En BLACK FOREST TECHNOLOGY</b>, nos comprometemos a proteger la privacidad de nuestros usuarios. Esta Política de privacidad describe Nuestras políticas y procedimientos sobre la recopilación, uso y divulgación de Su información cuando usa el Servicio y le informa sobre Sus derechos de privacidad y cómo la ley lo protege.</string>
+    <string name="TextoTerminos4"><b>Uso de información personal.</b> \n\Utilizamos la información personal que recopilamos para proporcionar y mejorar nuestros servicios, para responder a preguntas y solicitudes de nuestros usuarios y para enviar información sobre actualizaciones. También podemos utilizar la información personal para fines estadísticos y de investigación de mercado.</string>
+    <string name="TextoTerminos5"><b>Divulgación de información personal.</b>\n\No compartiremos la información personal de nuestros usuarios con terceros, excepto en los siguientes casos:\n\• Con autoridades legales y gubernamentales cuando sea necesario para cumplir con la ley o proteger nuestros derechos legales.</string>
+    <string name="TextoTerminos6"><b>Protección de información personal.</b>\n\Tomamos medidas de seguridad razonables para proteger la información personal de nuestros usuarios, incluyendo medidas físicas, técnicas y administrativas.</string>
+    <string name="TextoTerminos7"><b>Retención de información personal.</b>\n\Mantenemos la información personal de nuestros usuarios mientras sea necesaria para proporcionar nuestros servicios o cumplir con fines legales o regulatorios.</string>
+    <string name="TextoTerminos8"><b>Cambios en esta Política de privacidad.</b>\n\Nos reservamos el derecho de modificar esta Política de privacidad en cualquier momento. Publicaremos cualquier cambio en esta página y, si los cambios son significativos, proporcionaremos un aviso adicional a nuestros usuarios.</string>
+    <string name="TextoTerminos9"><b>Cambios en esta Política de privacidad.</b>\n\Nos reservamos el derecho de modificar esta Política de privacidad en cualquier momento. Publicaremos cualquier cambio en esta página y, si los cambios son significativos, proporcionaremos un aviso adicional a nuestros usuarios.</string>
+    <string name="TextoTerminos10"><b>Contacto.</b>\n\Si tiene alguna pregunta o inquietud sobre nuestra Política de privacidad,contáctenos:\n\• Por correo electrónico: <b>eh6479@gmail.com</b>.</string>
 </resources>

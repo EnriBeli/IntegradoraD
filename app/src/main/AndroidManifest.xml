@@ -15,6 +15,9 @@
         android:theme="@style/Base.Theme.IntegradoraD."
         tools:targetApi="31">
         <activity
+            android:name=".TerminosCondicionesActivity"
+            android:exported="false" />
+        <activity
             android:name=".UbicacionActivity"
             android:exported="false" />
         <activity
