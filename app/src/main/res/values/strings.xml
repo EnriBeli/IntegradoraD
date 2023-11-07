@@ -1,10 +1,45 @@
 <resources>
-    <string name="app_name">Integradora10</string>
+    <!--AGREGAR NOTA EN BASE DE DATOS-->
+    <string name="Agregar_Nota_BD">Agregar</string>
+
+    <!-- MENU PRINCIPAL-->
+    <string name="BienvenidoPrincipal">Bienvenido(a)</string>
+    <string name="NombresPrincipal"> -- </string>
+    <string name="CorreoPrincipal"> -- </string>
+    <string name="UidPrincipal"> -- </string>
+
+    <!-- REGISTRAR CITAS-->
+    <string name="idusercitas">Uid del usuario</string>
+    <string name="correousercitas">Correo de usuario</string>
+    <string name="Fecha_hora_actual">Fecha y hora actual</string>
+    <string name="Titulo">Consulta, Cita</string>
+    <string name="Descripcion">Describa sus cintomas...</string>
+    <string name="Btn_Calendatio">Calendario</string>
+    <string name="Fecha">00/00/0000</string>
+    <string name="Btn_Hora">Hora</string>
+    <string name="Hora">00:00</string>
+    <string name="Estodo">En Espera...</string>
+    <string name="Btn_Enviar">Agendar Cita</string>
+
+    <!-- LISTAR NOTAS-->
+
+    <string name="uidusuariocitas_item">Uid del usuario</string>
+    <string name="correousuariocitas_item">Correo de usuario</string>
+    <string name="hora_item">hora</string>
+    <string name="titulo_item">Titulo</string>
+    <string name="descripcion_item">Descripcion</string>
+    <string name="fecha_item">00/00/0000</string>
+    <string name="fechaHoraActual_item">00/00/0000</string>
+    <string name="estodo_item">En Espera...</string>
+
+
+    <string name="app_name">Medical Speed</string>
     <string name="title_active_login">BIENVENIDOS</string>
     <string name="password">Contraseña</string>
     <string name="new_password">Nueva contraseña</string>
     <string name="current_password">Contraseña actual</string>
     <string name="name">Nombre completo</string>
+    <string name="Nombre">Nombre</string>
     <string name="email">Email</string>
     <string name="login">Iniciar</string>
     <string name="repeat_password">Confirma la contraseña</string>

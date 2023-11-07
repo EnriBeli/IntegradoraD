@@ -21,6 +21,7 @@ class AccountRecoveryActivity : AppCompatActivity() {
         binding.Recoverylogin.setOnClickListener {
             val intent = Intent(this, SignInActivity::class.java)
             this.startActivity(intent)
+            finish()
         }
 
 
@@ -31,6 +32,7 @@ class AccountRecoveryActivity : AppCompatActivity() {
                     if (task.isSuccessful) {
                         val intent = Intent(this, SignInActivity::class.java)
                         this.startActivity(intent)
+
                     } else {
                         Toast.makeText(baseContext, "Ingrese un email de una cuenta valida.",
                             Toast.LENGTH_SHORT).show()

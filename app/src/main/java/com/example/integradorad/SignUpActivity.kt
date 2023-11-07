@@ -2,11 +2,13 @@ package com.example.integradorad
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextUtils
 import android.util.Patterns
 import android.widget.Toast
 import com.example.integradorad.databinding.ActivitySignUpBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase
 import java.util.regex.Pattern
 
@@ -14,6 +16,7 @@ class SignUpActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
     private lateinit var binding: ActivitySignUpBinding
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +27,7 @@ class SignUpActivity : AppCompatActivity() {
 
         binding.signUpButton.setOnClickListener {
 
+            val mNombre = binding.NombreEditText.text.toString()
             val mEmail = binding.emailEditText.text.toString()
             val mPassword = binding.passwordEditText.text.toString()
             val mRepeatPassword = binding.repeatPasswordEditText.text.toString()
@@ -32,8 +36,10 @@ class SignUpActivity : AppCompatActivity() {
                     "(?=.*[-@#$%^&+=])" +     // Al menos 1 carácter especial
                     ".{6,}" +                // Al menos 4 caracteres
                     "$")
-
-            if(mEmail.isEmpty() || !Patterns.EMAIL_ADDRESS.matcher(mEmail).matches()) {
+            if (TextUtils.isEmpty(mNombre)){
+                Toast.makeText(this, "Ingrese nombre", Toast.LENGTH_SHORT).show();
+            }
+            else if(mEmail.isEmpty() || !Patterns.EMAIL_ADDRESS.matcher(mEmail).matches()) {
                 Toast.makeText(this, "Ingrese un email valido.",
                     Toast.LENGTH_SHORT).show()
             } else if (mPassword.isEmpty() || !passwordRegex.matcher(mPassword).matches()){
@@ -51,6 +57,7 @@ class SignUpActivity : AppCompatActivity() {
         binding.SesionInico.setOnClickListener {
             val intent = Intent(this, SignInActivity::class.java)
             this.startActivity(intent)
+            finish()
         }
 
         binding.TeminosCondiciones.setOnClickListener {
@@ -78,11 +85,30 @@ class SignUpActivity : AppCompatActivity() {
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    val intent = Intent(this, CheckEmailActivity::class.java)
-                    this.startActivity(intent)
+                    val user = auth.currentUser
+                    if (user != null) {
+                        // Obtener el ID del usuario
+                        val userId = user.uid
+
+                        // Crear un objeto que contiene los datos del usuario
+                        val userData = HashMap<String, Any>()
+                        userData["uid"] = userId
+                        userData["nombre"] = binding.NombreEditText.text.toString()
+                        userData["correo"] = email
+                        userData["password"] = password
+
+                        // Guardar los datos del usuario en la base de datos Realtime Database
+                        val databaseReference = FirebaseDatabase.getInstance().reference
+                        databaseReference.child("Usuarios").child(userId).setValue(userData)
+
+                        // Redirigir a la actividad de verificación de correo
+                        val intent = Intent(this, CheckEmailActivity::class.java)
+                        startActivity(intent)
+                    } else {
+                        Toast.makeText(this, "Error al obtener el usuario actual", Toast.LENGTH_SHORT).show()
+                    }
                 } else {
-                    Toast.makeText(this, "No se pudo crear la cuenta. Vuelva a intertarlo",
-                        Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "No se pudo crear la cuenta. Vuelva a intentarlo", Toast.LENGTH_SHORT).show()
                 }
             }
     }

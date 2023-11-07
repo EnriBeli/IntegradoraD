@@ -4,6 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
@@ -11,6 +12,10 @@ import com.example.integradorad.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.auth.ktx.userProfileChangeRequest
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
@@ -28,6 +33,53 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         auth = Firebase.auth
+
+
+        // Obtén una referencia a Firebase Authentication
+        val auth = FirebaseAuth.getInstance()
+
+// Obtén una referencia a Firebase Realtime Database
+        val database = FirebaseDatabase.getInstance()
+        val usuariosRef = database.getReference("Usuarios")
+
+// Obtén el usuario actual
+        val user = auth.currentUser
+
+        if (user != null) {
+            // Obten el ID del usuario actual
+            val userId = user.uid
+
+            // Obtén una referencia al nodo "Usuarios" y al nodo del usuario actual
+            val usuarioActualRef = usuariosRef.child(userId)
+
+            // Escucha los cambios en los datos del usuario actual
+            usuarioActualRef.addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(dataSnapshot: DataSnapshot) {
+                    if (dataSnapshot.exists()) {
+                        val usuario = dataSnapshot.getValue(Usuario::class.java)
+
+                        if (usuario != null) {
+                            val uidPrincipallTextView = findViewById<TextView>(R.id.uidPrincipal)
+                            val nombresPrincipalTextView = findViewById<TextView>(R.id.NombresPrincipal)
+                            val correoPrincipalTextView = findViewById<TextView>(R.id.CorreoPrincipal)
+
+                            // Actualiza los TextViews con los datos del usuario
+                            uidPrincipallTextView.text = "Id: " + user.uid
+                            nombresPrincipalTextView.text = "Nombre: " + usuario.nombre
+                            correoPrincipalTextView.text = "Correo: " + user.email
+                        }
+                    }
+                }
+
+                override fun onCancelled(databaseError: DatabaseError) {
+                    // Manejar errores, si es necesario
+                }
+            })
+        }
+
+
+
+
 
         /*updateUI()*/
 
@@ -53,6 +105,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.signOutImageView.setOnClickListener {
             signOut()
+            finish()
         }
 
         binding.MiMedicoButton01.setOnClickListener {
@@ -86,24 +139,35 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
-/*
-    private  fun updateProfile (name : String) {
 
-        val user = auth.currentUser
+    class Usuario {
+        val nombre: String? = null
+        val correo: String? = null
+    }
 
-        val profileUpdates = userProfileChangeRequest {
-            displayName = name
-        }
+    private  fun signOut(){
+        auth.signOut()
+        val intent = Intent(this, SignInActivity::class.java)
+        this.startActivity(intent)
+    }
+    /*
+        private  fun updateProfile (name : String) {
 
-        user!!.updateProfile(profileUpdates)
-            .addOnCompleteListener { task ->
-                if (task.isSuccessful) {
-                    Toast.makeText(this, "Se realizaron los cambios correctamente.",
-                        Toast.LENGTH_SHORT).show()
-                    updateUI()
-                }
+            val user = auth.currentUser
+
+            val profileUpdates = userProfileChangeRequest {
+                displayName = name
             }
-    }*/
+
+            user!!.updateProfile(profileUpdates)
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        Toast.makeText(this, "Se realizaron los cambios correctamente.",
+                            Toast.LENGTH_SHORT).show()
+                        updateUI()
+                    }
+                }
+        }*/
 
     private fun fileManager() {
         val intent = Intent(Intent.ACTION_GET_CONTENT)
@@ -180,9 +244,7 @@ class MainActivity : AppCompatActivity() {
 
     }*/
 
-    private  fun signOut(){
-        auth.signOut()
-        val intent = Intent(this, SignInActivity::class.java)
-        this.startActivity(intent)
-    }
+
 }
+
+
