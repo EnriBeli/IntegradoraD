@@ -8,6 +8,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
+import com.example.integradorad.ListarNotas.ListarNotas
 import com.example.integradorad.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -59,14 +60,14 @@ class MainActivity : AppCompatActivity() {
                         val usuario = dataSnapshot.getValue(Usuario::class.java)
 
                         if (usuario != null) {
-                            val uidPrincipallTextView = findViewById<TextView>(R.id.uidPrincipal)
+
                             val nombresPrincipalTextView = findViewById<TextView>(R.id.NombresPrincipal)
-                            val correoPrincipalTextView = findViewById<TextView>(R.id.CorreoPrincipal)
+
 
                             // Actualiza los TextViews con los datos del usuario
-                            uidPrincipallTextView.text = "Id: " + user.uid
+
                             nombresPrincipalTextView.text = "Nombre: " + usuario.nombre
-                            correoPrincipalTextView.text = "Correo: " + user.email
+
                         }
                     }
                 }
@@ -129,7 +130,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.MisCitasButton05.setOnClickListener {
-            val intent = Intent(this, MisCitasActivity::class.java)
+            val intent = Intent(this, ListarNotas::class.java)
             this.startActivity(intent)
         }
 

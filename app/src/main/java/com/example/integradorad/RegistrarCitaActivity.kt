@@ -27,6 +27,7 @@ class RegistrarCitaActivity : AppCompatActivity() {
     private lateinit var CorreousuarioTextView: TextView
     private lateinit var FechahoraactualTextView: TextView
 
+    private lateinit var nombreEditText: EditText
     private lateinit var tituloEditText: EditText
     private lateinit var descripcionEditText: EditText
     private lateinit var fechaTextView: TextView
@@ -113,6 +114,7 @@ class RegistrarCitaActivity : AppCompatActivity() {
         CorreousuarioTextView = findViewById(R.id.Correo_usuario)
         FechahoraactualTextView = findViewById(R.id.Fecha_hora_actual)
 
+        nombreEditText = findViewById(R.id.Nombre)
         tituloEditText = findViewById(R.id.Titulo)
         descripcionEditText = findViewById(R.id.Descripcion)
         fechaTextView = findViewById(R.id.Fecha)
@@ -125,6 +127,7 @@ class RegistrarCitaActivity : AppCompatActivity() {
             val Uid_Usuario = UidUsuarioTextView .text.toString().trim()
             val Correo_usuario = CorreousuarioTextView .text.toString().trim()
             val Fecha_hora_actual = FechahoraactualTextView .text.toString().trim()
+            val nombre = nombreEditText.text.toString().trim()
             val titulo = tituloEditText.text.toString().trim()
             val descripcion = descripcionEditText.text.toString().trim()
             val fecha = fechaTextView.text.toString().trim()
@@ -140,6 +143,7 @@ class RegistrarCitaActivity : AppCompatActivity() {
                         Uid_Usuario,
                         Correo_usuario,
                         Fecha_hora_actual,
+                        nombre,
                         titulo,
                         descripcion,
                         fecha,
@@ -175,6 +179,7 @@ class RegistrarCitaActivity : AppCompatActivity() {
         val uidUsuario: String,
         val correoUsuario: String,
         val fechaHoraActual: String,
+        val nombre: String,
         val titulo: String,
         val descripcion: String,
         val fecha: String,

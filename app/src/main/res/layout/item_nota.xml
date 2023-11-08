@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardUseCompatPadding="true"
+    android:padding="15dp"
+    app:cardCornerRadius="10dp">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:background="@drawable/ic_buttom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+
+        <TextView
+            android:id="@+id/correousuariocitas_item"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:text="@string/correousuariocitas_item"
+            android:textSize="20dp" />
+        <TextView
+            android:id="@+id/titulo_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo_item"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/descripcion_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/descripcion_item"
+            android:layout_marginLeft="15dp"
+            android:textSize="20dp" />
+
+
+        <TextView
+            android:id="@+id/fecha_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fecha_item"
+            android:layout_marginLeft="15dp"
+            android:textSize="20dp" />
+        <TextView
+            android:id="@+id/fechaHoraActual_item"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fechaHoraActual_item"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/hora_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hora_item"
+            android:layout_marginLeft="15dp"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/estodo_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/estodo_item"
+            android:layout_marginLeft="15dp"
+            android:textSize="20dp" />
+
+
+
+
+        <TextView
+            android:id="@+id/uidUsuariocitas_item"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:text="@string/uidusuariocitas_item"
+            android:textSize="20dp" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.cardview.widget.CardView>

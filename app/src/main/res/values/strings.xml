@@ -10,8 +10,10 @@
 
     <!-- REGISTRAR CITAS-->
     <string name="idusercitas">Uid del usuario</string>
+    <string name="usercitas">Usuario</string>
     <string name="correousercitas">Correo de usuario</string>
     <string name="Fecha_hora_actual">Fecha y hora actual</string>
+    <string name="NombreUser">Nombre completo</string>
     <string name="Titulo">Consulta, Cita</string>
     <string name="Descripcion">Describa sus cintomas...</string>
     <string name="Btn_Calendatio">Calendario</string>

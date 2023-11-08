@@ -27,10 +27,11 @@
         android:layout_width="49dp"
         android:layout_height="38dp"
         android:layout_gravity="end"
-        android:layout_marginTop="676dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/ic_buttom"
         android:contentDescription="@string/all"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.953"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_sign_out"
@@ -38,16 +39,24 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"
-        android:layout_width="match_parent"
-        android:layout_height="135dp"
-        app:cardBackgroundColor="@color/black"
-        app:cardUseCompatPadding="true"
+        android:layout_width="336dp"
+        android:layout_height="89dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginEnd="100dp"
+        android:backgroundTint="#64C1EC"
         android:padding="0.2dp"
-        app:cardCornerRadius="5dp">
+        app:cardBackgroundColor="@color/blue"
+        app:cardCornerRadius="5dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_width="336dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
             android:orientation="vertical"
             android:padding="5dp">
 
@@ -55,13 +64,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/BienvenidoPrincipal"
-                android:textColor="@color/white"
-                android:textSize="20sp" />
-            <TextView
-                android:id="@+id/uidPrincipal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/UidPrincipal"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
@@ -73,15 +75,6 @@
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/CorreoPrincipal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/CorreoPrincipal"
-                android:textColor="@color/white"
-                android:textSize="20sp" />
-
-
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -91,12 +84,13 @@
         android:id="@+id/linearLayout3"
         android:layout_width="346dp"
         android:layout_height="125dp"
+        android:layout_marginTop="230dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.369"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView2"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.12">
 
 
@@ -232,6 +226,15 @@
 
     </LinearLayout>
 
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="261dp"
+        android:layout_height="174dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/logo2"
+        tools:layout_editor_absoluteY="1dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
