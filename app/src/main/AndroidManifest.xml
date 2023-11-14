@@ -26,35 +26,47 @@
 
         <activity
             android:name=".ListarNotas.ListarNotas"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="locked"/>
         <activity
             android:name=".TerminosCondicionesActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="locked"/>
         <activity
             android:name=".UbicacionActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="locked"/>
 
         <activity
             android:name=".RegistrarCitaActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="locked"/>
         <activity
             android:name=".MisMedicamentosActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="locked"/>
         <activity
             android:name=".MisRecetasActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="locked"/>
         <activity
             android:name=".MiMedico"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="locked"/>
         <activity
             android:name=".MainActivity"
-            android:theme="@style/Theme.Main" />
-        <activity android:name=".AccountRecoveryActivity" />
-        <activity android:name=".CheckEmailActivity" />
-        <activity android:name=".SignUpActivity" />
+            android:theme="@style/Theme.Main"
+            android:screenOrientation="locked"/>
+        <activity android:name=".AccountRecoveryActivity"
+            android:screenOrientation="locked"/>
+        <activity android:name=".CheckEmailActivity"
+            android:screenOrientation="locked"/>
+        <activity android:name=".SignUpActivity"
+            android:screenOrientation="locked"/>
         <activity
             android:name=".SignInActivity"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="locked">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

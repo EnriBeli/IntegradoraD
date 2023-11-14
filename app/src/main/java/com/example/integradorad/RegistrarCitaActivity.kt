@@ -135,11 +135,11 @@ class RegistrarCitaActivity : AppCompatActivity() {
             val Estado = EstadoTextView.text.toString().trim()
 
 
-            if (titulo.isNotEmpty() && descripcion.isNotEmpty() && fecha.isNotEmpty() && hora.isNotEmpty()) {
+            if (nombre.isNotEmpty() && titulo.isNotEmpty() && descripcion.isNotEmpty() && fecha.isNotEmpty() && hora.isNotEmpty()) {
                 // Todos los campos están llenos, puedes proceder a guardar los datos en Firebase
                 val nuevaCitaId = databaseReference.push().key
                 if (nuevaCitaId != null) {
-                    val nuevaCita = Cita(
+                    val nuevaCita = Cita(Correo_usuario+"/"+Fecha_hora_actual,
                         Uid_Usuario,
                         Correo_usuario,
                         Fecha_hora_actual,
@@ -176,6 +176,7 @@ class RegistrarCitaActivity : AppCompatActivity() {
     }
 
     data class Cita(
+        val id_citas: String,
         val uidUsuario: String,
         val correoUsuario: String,
         val fechaHoraActual: String,

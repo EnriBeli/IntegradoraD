@@ -1,13 +1,14 @@
 package com.example.integradorad.Objetos;
 
 public class Nota {
-    String correoUsuario, descripcion, estado, fecha, fechaHoraActual, hora, titulo, uidUsuario;
+    String id_citas, correoUsuario, descripcion, estado, fecha, fechaHoraActual, hora, titulo, uidUsuario;
 
     public Nota() {
 
     }
 
-    public Nota(String correoUsuario, String descripcion, String estado, String fecha, String fechaHoraActual, String hora, String titulo, String uidUsuario) {
+    public Nota(String id_citas, String correoUsuario, String descripcion, String estado, String fecha, String fechaHoraActual, String hora, String titulo, String uidUsuario) {
+        this.id_citas = id_citas;
         this.correoUsuario = correoUsuario;
         this.descripcion = descripcion;
         this.estado = estado;
@@ -18,6 +19,10 @@ public class Nota {
         this.uidUsuario = uidUsuario;
     }
 
+    public String getId_citas(){
+        return id_citas;
+    }
+    public void setId_citas(String id_citas){this.id_citas = id_citas;}
     public String getCorreoUsuario() {
         return correoUsuario;
     }

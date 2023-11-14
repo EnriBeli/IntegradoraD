@@ -17,15 +17,27 @@
         android:padding="30dp">
 
         <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="REGISTRAR CITA"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            />
+
+        <TextView
             android:layout_marginTop="10dp"
             android:id="@+id/Uid_Usuario"
             android:hint="@string/idusercitas"
+            android:visibility="gone"
             android:textSize="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <TextView
             android:id="@+id/Correo_usuario"
             android:hint="@string/correousercitas"
+            android:visibility="gone"
             android:textSize="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -33,6 +45,7 @@
             android:id="@+id/Fecha_hora_actual"
             android:hint="@string/Fecha_hora_actual"
             android:textSize="15dp"
+            android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
@@ -40,7 +53,7 @@
         <EditText
             android:id="@+id/Nombre"
             android:hint="@string/usercitas"
-            android:textSize="25dp"
+            android:textSize="20dp"
             android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
@@ -48,7 +61,7 @@
         <EditText
             android:id="@+id/Titulo"
             android:hint="@string/Titulo"
-            android:textSize="25dp"
+            android:textSize="20dp"
             android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
@@ -59,8 +72,7 @@
             android:layout_marginTop="10dp"
             android:minHeight="150dp"
             android:gravity="start"
-            android:textStyle="bold"
-            android:background="@drawable/ic_buttom"
+            android:background="@drawable/conten_descripcion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
@@ -72,11 +84,11 @@
 
             <Button
                 android:id="@+id/Btn_Calendario"
-                android:text="@string/Btn_Calendatio"
-                app:icon="@drawable/ice_calendar"
-                android:background="@drawable/ic_buttom"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:backgroundTint="#3F51B5"
+                android:text="@string/Btn_Calendatio"
+                app:icon="@drawable/ice_calendar" />
 
             <TextView
                 android:id="@+id/Fecha"
@@ -98,7 +110,7 @@
                 android:id="@+id/Btn_Hora"
                 android:text="@string/Btn_Hora"
                 app:icon="@drawable/ice_hora"
-                android:background="@drawable/ic_buttom"
+                android:backgroundTint="#3F51B5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
@@ -127,23 +139,26 @@
             android:orientation="horizontal"
             android:gravity="center_horizontal">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/Btn_Cancelar"
-                android:text="Cancelar"
-                android:background="@drawable/ic_buttom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="70dp"
                 android:layout_marginTop="18dp"
-                />
+                android:backgroundTint="#3F51B5"
+                android:text="Cancelar" />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/Btn_Guardar_datos"
-                android:text="@string/Btn_Enviar"
-                android:layout_marginTop="18dp"
-                android:background="@drawable/ic_buttom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"/>
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="18dp"
+                android:backgroundTint="#32DBB3"
+                android:text="@string/Btn_Enviar"
+                android:textColor="#FFFFFF" />
 
 
 

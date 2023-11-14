@@ -19,7 +19,13 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="5dp">
-
+        <TextView
+            android:id="@+id/id_citas_item"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/id_citas_item"
+            android:textSize="20dp" />
 
         <TextView
             android:id="@+id/correousuariocitas_item"

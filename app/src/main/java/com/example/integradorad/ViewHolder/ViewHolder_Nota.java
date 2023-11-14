@@ -45,15 +45,16 @@ public class ViewHolder_Nota extends RecyclerView.ViewHolder {
         });
     }
 
-    public void SetearDatos(Context context, String correoUsuario, String descripcion, String estado, String fecha,
+    public void SetearDatos(Context context, String id_citas ,String correoUsuario, String descripcion, String estado, String fecha,
                             String fechaHoraActual, String hora, String titulo, String uidUsuario){
 
 
         //DECLARAMOS LAS VISTAS
-        TextView correousuariocitas_item, descripcion_item, estodo_item, fecha_item,
+        TextView id_citas_item, correousuariocitas_item, descripcion_item, estodo_item, fecha_item,
                 fechaHoraActual_item, hora_item, titulo_item, uidUsuariocitas_item;
 
         //ESTABLECER CONEXION CON EL ITEM
+        id_citas_item = mView.findViewById(R.id.id_citas_item);
         correousuariocitas_item = mView.findViewById(R.id.correousuariocitas_item);
         descripcion_item = mView.findViewById(R.id.descripcion_item);
         estodo_item = mView.findViewById(R.id.estodo_item);
@@ -64,6 +65,7 @@ public class ViewHolder_Nota extends RecyclerView.ViewHolder {
         uidUsuariocitas_item = mView.findViewById(R.id.uidUsuariocitas_item);
 
         //SETEAR LA INFORMACION DENTRO DEL ITEM
+        id_citas_item.setText(id_citas);
         correousuariocitas_item.setText(correoUsuario);
         descripcion_item.setText("Descripcion: " + descripcion);
         estodo_item.setText("Estado: " + estado);

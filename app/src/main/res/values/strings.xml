@@ -1,4 +1,8 @@
 <resources>
+    <!--CUADRO DE DIALOGO OPCIONES-->
+    <string name="ElijaOpcionTXT">Cancelar tu cita</string>
+    <string name="CD_Cancelar">Cancelar</string>
+
     <!--AGREGAR NOTA EN BASE DE DATOS-->
     <string name="Agregar_Nota_BD">Agregar</string>
 
@@ -10,21 +14,21 @@
 
     <!-- REGISTRAR CITAS-->
     <string name="idusercitas">Uid del usuario</string>
-    <string name="usercitas">Usuario</string>
+    <string name="usercitas">Agregue su monbre completo</string>
     <string name="correousercitas">Correo de usuario</string>
     <string name="Fecha_hora_actual">Fecha y hora actual</string>
     <string name="NombreUser">Nombre completo</string>
     <string name="Titulo">Consulta, Cita</string>
     <string name="Descripcion">Describa sus cintomas...</string>
-    <string name="Btn_Calendatio">Calendario</string>
+    <string name="Btn_Calendatio">Fecha para la cita</string>
     <string name="Fecha">00/00/0000</string>
-    <string name="Btn_Hora">Hora</string>
+    <string name="Btn_Hora">Establecer horario</string>
     <string name="Hora">00:00</string>
     <string name="Estodo">En Espera...</string>
-    <string name="Btn_Enviar">Agendar Cita</string>
+    <string name="Btn_Enviar">Enviar</string>
 
     <!-- LISTAR NOTAS-->
-
+    <string name="id_citas_item">id de cita</string>
     <string name="uidusuariocitas_item">Uid del usuario</string>
     <string name="correousuariocitas_item">Correo de usuario</string>
     <string name="hora_item">hora</string>
@@ -45,7 +49,7 @@
     <string name="email">Email</string>
     <string name="login">Iniciar</string>
     <string name="repeat_password">Confirma la contraseña</string>
-    <string name="signup">Sign Up</string>
+    <string name="signup">Registrarse </string>
     <string name="text_signup">¿Ya tienes una cuenta?</string>
     <string name="link_signup">Registrate</string>
     <string name="all">TODO</string>
@@ -79,7 +83,7 @@
     <string name="iniciar_sesion"><u>Iniciar Sesion</u></string>
     <string name="terminos_y_condiciones"><u>Terminos y condiciones</u></string>
     <string name="TextoTerminos3"><b>Recopilación de información personal.</b> \n\Recopilamos información personal de nuestros usuarios cuando se registran en nuestra Aplicación movil. La información personal que podemos recopilar incluye:\n\• Nombre y apellidos.  \n\• Dirección de correo electrónico. \n\• Número de teléfono.</string>
-    <string name="TextoTerminos1"><b>En BLACK FOREST TECHNOLOGY</b>, nos comprometemos a proteger la privacidad de nuestros usuarios. Esta Política de privacidad describe Nuestras políticas y procedimientos sobre la recopilación, uso y divulgación de Su información cuando usa el Servicio y le informa sobre Sus derechos de privacidad y cómo la ley lo protege.</string>
+    <string name="TextoTerminos1"><b>En MEDICAL SPEED</b>, nos comprometemos a proteger la privacidad de nuestros usuarios. Esta Política de privacidad describe Nuestras políticas y procedimientos sobre la recopilación, uso y divulgación de Su información cuando usa el Servicio y le informa sobre Sus derechos de privacidad y cómo la ley lo protege.</string>
     <string name="TextoTerminos4"><b>Uso de información personal.</b> \n\Utilizamos la información personal que recopilamos para proporcionar y mejorar nuestros servicios, para responder a preguntas y solicitudes de nuestros usuarios y para enviar información sobre actualizaciones. También podemos utilizar la información personal para fines estadísticos y de investigación de mercado.</string>
     <string name="TextoTerminos5"><b>Divulgación de información personal.</b>\n\No compartiremos la información personal de nuestros usuarios con terceros, excepto en los siguientes casos:\n\• Con autoridades legales y gubernamentales cuando sea necesario para cumplir con la ley o proteger nuestros derechos legales.</string>
     <string name="TextoTerminos6"><b>Protección de información personal.</b>\n\Tomamos medidas de seguridad razonables para proteger la información personal de nuestros usuarios, incluyendo medidas físicas, técnicas y administrativas.</string>
